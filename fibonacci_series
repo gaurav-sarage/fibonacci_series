@@ -1,0 +1,29 @@
+n = int(input("Enter the number of terms:"))
+a,b = 0,1
+i = 0
+
+if(n<=0):
+    print("Please enter a positive number.")
+
+elif(n==1):
+    print("Fibonacci series upto",n,":")
+    print(a)
+
+else:
+    print("Fibonacci series:")
+    for i in range(n):
+        print(a)
+        sum = a + b
+        a = b
+        b = sum
+        i += 1
+        
+        """
+        Output: Enter the number of terms:5
+                Fibonacci series:
+                0
+                1
+                1
+                2
+                3
+        """
